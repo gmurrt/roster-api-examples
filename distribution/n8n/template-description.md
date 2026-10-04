@@ -20,6 +20,8 @@ The workflow has a manual trigger, a setup note and one HTTP Request node. It do
 
 ## Cost and customization
 
+Prepaid access starts at $25 for 5,000 credits, without a monthly subscription, at 60 requests/minute. Credit purchases are manual; there is no automatic recharge. Existing subscribers retain their current terms.
+
 Each manual execution makes one search request and uses 10 Roster credits. It returns up to 20 matching records; fewer, including zero, may match. Automatic retries and pagination are disabled. Changing the result limit does not introduce additional pages. If you later add a schedule or pagination, set a recurring request budget first.
 
 No API key, pinned creator data or saved credentials are included. The workflow imports inactive. The HTTP Request node uses type version 4.2.

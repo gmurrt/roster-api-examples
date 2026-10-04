@@ -6,7 +6,7 @@ Bounded examples for searching creator records and retrieving stored profiles th
 
 - [Request builder](https://api.ugcroster.com/tools/request-builder): generate cURL or Python and preview the maximum credit cost. Does not execute requests.
 - [Data quality sample inspector](https://api.ugcroster.com/tools/data-quality): inspect your JSON locally for duplicate IDs and missing fields. Does not upload records.
-- [Usage calculator](https://api.ugcroster.com/pricing#calculator): compare monthly plans and prepaid top-ups.
+- [Usage calculator](https://api.ugcroster.com/pricing#calculator): estimate prepaid credit requirements.
 - [Workflow recipes](https://api.ugcroster.com/use-cases) and [API reference](https://api.ugcroster.com/docs).
 
 ## What the API provides
@@ -19,17 +19,21 @@ Creator location is not audience geography. A published email does not establish
 
 ## Authentication and current pricing
 
-Create a data key in the [API console](https://api.ugcroster.com/keys). Requests use `Authorization: Bearer <data key>`. An active paid API subscription is required. Do not commit or paste real keys into shared examples.
+Start with prepaid credits: **$25 / 5,000 credits**, **$125 / 25,000**, or **$500 / 100,000**. No monthly subscription is required. Existing subscribers retain their current terms.
+
+Create a data key in the [API console](https://api.ugcroster.com/keys). Requests use `Authorization: Bearer <data key>`. Use purchased prepaid credits without a monthly subscription. Existing subscribers can continue using their included credits. Prepaid access runs at 60 requests/minute. Do not commit or paste real keys into shared examples.
 
 Public pricing checked October 4, 2026:
 
-| Plan | Monthly subscription (USD) | Monthly credits | Requests / minute |
+| Prepaid pack | Price (USD) | Credits | Requests / minute |
 | --- | ---: | ---: | ---: |
-| Starter | $98 | 25,000 | 60 |
-| Growth | $398 | 150,000 | 120 |
-| Scale | $998 | 500,000 | 300 |
+| Starter pack | $25 | 5,000 | 60 |
+| Builder pack | $125 | 25,000 | 60 |
+| Volume pack | $500 | 100,000 | 60 |
 
-One search page costs **10 credits**, with up to 100 results per page. One profile read costs **1 credit**, including an unknown ID. Top-ups start at **$25 for 5,000 credits**, alongside an active subscription. These are credit allocations, not per-call cash checkout prices. Check [current pricing](https://api.ugcroster.com/pricing) and the [machine-readable capability manifest](https://api.ugcroster.com/capabilities.json) before running production jobs.
+These are one-time purchases. Existing monthly subscriptions keep their current terms; the table above describes new prepaid purchases.
+
+One search page costs **10 credits**, with up to 100 results per page. One profile read costs **1 credit**, including an unknown ID. Prepaid packs start at **$25 for 5,000 credits**, with no monthly subscription required. Purchased credits roll over. Purchases are manual; no automatic recharge or overage charges. These are credit allocations, not per-call cash checkout prices. Check [current pricing](https://api.ugcroster.com/pricing) and the [machine-readable capability manifest](https://api.ugcroster.com/capabilities.json) before running production jobs.
 
 ## Python: search to CSV
 

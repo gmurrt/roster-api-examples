@@ -70,7 +70,7 @@
       "retryOnFail": false,
       "executeOnce": true,
       "notesInFlow": true,
-      "notes": "Configure Header Auth: name Authorization; value Bearer followed by your Roster DATA key. Active API subscription required. One page, up to 20 results, 10 credits per execution; no retries or automatic pagination. Change q/country before running."
+      "notes": "Configure Header Auth: name Authorization; value Bearer followed by your Roster DATA key. Fund with prepaid credits; existing subscribers can use their included allowance. Prepaid access: $25/5,000 credits, no monthly subscription, 60 requests/minute; no automatic recharge. One page, up to 20 results, 10 credits per execution; no retries or automatic pagination. Change q/country before running."
     }
   ],
   "connections": {
