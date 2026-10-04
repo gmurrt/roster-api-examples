@@ -1,0 +1,79 @@
+{
+  "name": "Roster \u2014 one creator search (10 credits)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "roster-manual-trigger",
+      "name": "Run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        260,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.ugcroster.com/v1/creators/search",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "fitness"
+            },
+            {
+              "name": "country",
+              "value": "US"
+            },
+            {
+              "name": "page",
+              "value": "1"
+            },
+            {
+              "name": "limit",
+              "value": "20"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "roster-search",
+      "name": "Search creators \u2014 10 credits",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        520,
+        300
+      ],
+      "retryOnFail": false,
+      "executeOnce": true,
+      "notesInFlow": true,
+      "notes": "Configure Header Auth: name Authorization; value Bearer followed by your Roster DATA key. Active API subscription required. One page, up to 20 results, 10 credits per execution; no retries or automatic pagination. Change q/country before running."
+    }
+  ],
+  "connections": {
+    "Run manually": {
+      "main": [
+        [
+          {
+            "node": "Search creators \u2014 10 credits",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": []
+}
