@@ -33,7 +33,7 @@ Public pricing checked October 4, 2026:
 
 These are one-time purchases. Existing monthly subscriptions keep their current terms; the table above describes new prepaid purchases.
 
-One search page costs **10 credits**, with up to 100 results per page. One profile read costs **1 credit**, including an unknown ID. Prepaid packs start at **$25 for 5,000 credits**, with no monthly subscription required. Purchased credits roll over. Purchases are manual; no automatic recharge or overage charges. These are credit allocations, not per-call cash checkout prices. Check [current pricing](https://api.ugcroster.com/pricing) and the [machine-readable capability manifest](https://api.ugcroster.com/capabilities.json) before running production jobs.
+One search page costs **10 credits**, with up to 100 results per page. One profile read costs **1 credit**, including an unknown ID. Prepaid packs start at **$25 for 5,000 credits**, with no monthly subscription required. Purchased credits roll over. Purchases are manual by default. Optional auto-reload requires explicit authorization in the console, a chosen threshold and a monthly spending limit. It is off by default; no overage charges. Agents must not enable auto-reload or purchase credits without separate user authorization. These are credit allocations, not per-call cash checkout prices. Check [current pricing](https://api.ugcroster.com/pricing) and the [machine-readable capability manifest](https://api.ugcroster.com/capabilities.json) before running production jobs.
 
 ## Python: search to CSV
 
