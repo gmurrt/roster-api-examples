@@ -2,6 +2,22 @@
   "name": "Roster \u2014 one creator search (10 credits)",
   "nodes": [
     {
+      "parameters": {
+        "content": "## Find creators with Roster\n\n**Before you run**\n1. Get your own data key at https://api.ugcroster.com/keys.\n2. In the HTTP Request node, select Header Auth. Set name `Authorization` and value `Bearer YOUR_ROSTER_DATA_KEY` in the credential store.\n3. Review the niche (`q`), creator country, page and result limit.\n\n**One manual run = one search page / 10 credits.** Up to 20 results; no automatic pagination or retries. Check https://api.ugcroster.com/pricing for current access requirements. No credentials or creator records are included.\n\nReturned profiles are stored directory data. Creator country is not audience geography. This workflow does not contact anyone.",
+        "height": 410,
+        "width": 720,
+        "color": 6
+      },
+      "id": "roster-setup-note",
+      "name": "Start here \u2014 credentials and request budget",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        160,
+        -140
+      ]
+    },
+    {
       "parameters": {},
       "id": "roster-manual-trigger",
       "name": "Run manually",
